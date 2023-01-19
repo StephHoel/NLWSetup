@@ -1,6 +1,9 @@
 import { HabitDay } from "./HabitDay"
+import { generateDatesFromYearBeginning } from '../utils/generate-dates-from-year-beginning';
 
 const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S']
+
+const summaryDates = generateDatesFromYearBeginning()
 
 export function SummaryTable() {
    return (
@@ -19,22 +22,9 @@ export function SummaryTable() {
          </div>
 
          <div className="grid grid-rows-7 grid-flow-col gap-3">
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
-            <HabitDay />
+            {summaryDates.map(date => {
+               return <HabitDay key={date.toString()} />
+            })}
          </div>
       </div>
    )
