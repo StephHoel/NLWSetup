@@ -4,12 +4,10 @@
 .
 
 ## Features:
-- [] Faz isso
-- [] Faz aquilo
+- [] Criar um novo hábito
+- [] Exibir hábitos diários com diferença de tons entre dias sem hábito realizado e dias com hábitos realizados
 
 .
 
 ## Dev:
 - Steph Hoel [Discord: Hoel#0529]
-
-
