@@ -17,7 +17,7 @@ export function AppRoutes() {
             component={New}
          />
          <Screen
-            name="Habit"
+            name="habit"
             component={Habit}
          />
       </Navigator>
