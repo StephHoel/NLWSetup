@@ -1,0 +1,139 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-21T17:34:01.186Z
+__export_source: insomnia.desktop.app:v2022.7.4
+resources:
+  - _id: req_991729fd61564914b70a61dbe79f51cc
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674074584367
+    created: 1674073052704
+    url: "{{ _.base }}/habits"
+    name: Create Habit
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Exemplo",
+        	"weekDays": [0,1,2]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1674073052704
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    parentId: null
+    modified: 1674073046721
+    created: 1674073046721
+    name: API
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_df298185012947ee9caab351afb49457
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674086216332
+    created: 1674074591616
+    url: "{{ _.base }}/day"
+    name: Get Day
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_3d84600c9b0a46ee8359a2a78300da11
+        name: date
+        value: 2023-01-02T14:00:00.000z
+        description: ""
+        disabled: false
+    headers: []
+    authentication: {}
+    metaSortKey: -1671214998784
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b8b7571d52524fd0880fe9f8ae2f27b3
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674179999428
+    created: 1674179995033
+    url: "{{ _.base }}/summary"
+    name: Get Summary
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1670500485304
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_90efd418789a4859860881b03cac08df
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674179510973
+    created: 1674179491263
+    url: "{{ _.base }}/habits/0730ffac-d039-4194-9571-01aa2aa0efbd/toggle"
+    name: Toggle Habit
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1669785971824
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_89bf9d2c7e2daf54e0612bdfa9c605ad1df3b2cc
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674322223257
+    created: 1674073046744
+    name: Base Environment
+    data:
+      base: http://localhost:3333
+    dataPropertyOrder:
+      "&":
+        - base
+    color: null
+    isPrivate: false
+    metaSortKey: 1674073046744
+    _type: environment
+  - _id: jar_89bf9d2c7e2daf54e0612bdfa9c605ad1df3b2cc
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674073046746
+    created: 1674073046746
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_48951dce93d54a24b8116f578fe8b692
+    parentId: wrk_cb15586d501c4f6086e8b3a73f6a1483
+    modified: 1674073046732
+    created: 1674073046732
+    fileName: API
+    contents: ""
+    contentType: yaml
+    _type: api_spec
