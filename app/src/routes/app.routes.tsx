@@ -4,10 +4,15 @@ const { Navigator, Screen } = createNativeStackNavigator()
 import { Home } from '../screens/Home';
 import { New } from '../screens/New';
 import { Habit } from '../screens/Habit';
+import { NewScreen } from '../screens/NewScreen';
 
 export function AppRoutes() {
    return (
-      <Navigator screenOptions={{headerShown: false}}>
+      <Navigator screenOptions={{ headerShown: false }}>
+         <Screen
+            name="newscreen"
+            component={NewScreen}
+         />
          <Screen
             name="home"
             component={Home}
