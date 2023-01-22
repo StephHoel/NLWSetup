@@ -6,12 +6,15 @@ import colors from 'tailwindcss/colors';
 import { BackButton } from "../components/BackButton";
 import { Checkbox } from "../components/Checkbox";
 import { api } from '../lib/axios';
+import { useNavigation } from '@react-navigation/native';
 
 const availableWeekDays = ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado']
 
 export function New() {
    const [weekDays, setWeekDays] = useState<number[]>([])
    const [title, setTitle] = useState('')
+
+   const { navigate } = useNavigation()
 
    function handleToggleWeekDay(weekDayIndex: number) {
       if (weekDays.includes(weekDayIndex)) {
@@ -28,11 +31,13 @@ export function New() {
          }
 
          await api.post('/habits', { title, weekDays })
-         
-         Alert.alert('Novo Hábito','Hábito criado com sucesso!')
-         
+
+         Alert.alert('Novo Hábito', 'Hábito criado com sucesso!')
+
          setTitle('')
          setWeekDays([])
+
+         navigate('home')
       } catch (error) {
          console.log(error)
          Alert.alert('Ops', 'Não foi possível criar o novo hábito!')
